@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+}
+
+.poster {
+    position: relative;
+    width: 40vw;
+    max-width: 600px;
+    height: 100%;
+    max-height: 900px;
+    background: white;
+    display: flex;
+}
+
+.black-section {
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 100%;
+    background: black;
+}
+
+.colour-blocks {
+    position: absolute;
+    right: 35%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    height: 20vh;
+    max-height: 120px;
+    width: 100%;
+}
+
+.blue { background: #0066cc; }
+.yellow { background: #ffcc00; }
+.red { background: #990000; }
+
+.name {
+    position: absolute;
+    bottom: 30%;
+    left: 1%;
+    font-size: 1.5vw;
+}
+
+.details {
+    position: absolute;
+    left: 66%;
+    bottom: 12%;
+    width: 30%;
+    color: white;
+    font-size: 0.5vw;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.details div {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.details div:nth-child(1) {
+    border-top: 1px solid white;
+    padding-top: 5px;
+    margin-top: 5px;
+} 
+
+.footer-details {
+    position: absolute;
+    left: 66%;
+    bottom: 1%;
+    width: 30%;
+    color: white;
+    font-size: 0.2vw;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .poster {
+        width: 80vw; /* Expand for smaller screens */
+    }
+
+    .name {
+        font-size: 3.5vw; /* Larger text for small screens */
+        bottom: 30%;
+    }
+
+    .details {
+        font-size: 1vw; /* Larger text for small screens */
+        bottom: 15%;
+    }
+
+    .footer-details {
+        font-size: 0.5vw; /* Larger text for small screens */
+    }
+}
